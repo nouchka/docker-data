@@ -1,0 +1,19 @@
+init:
+  image: nouchka/data
+  environment:
+    - RSYNC_REPO=app1
+    - RSYNC_FILE=backup.tgz
+    - RSYNC_SERVER=rsyncd.server.lan
+    - RSYNC_USER=rsync-user
+    - RSYNC_PASSWORD=rsync-password
+    - MYSQL_SERVER=mysql.server.lan
+    - MYSQL_BDD=bdd1
+    - MYSQL_USER=mysql-user
+    - MYSQL_PASSWORD=mysql-password
+  volumes_from:
+    - data
+data:
+  image: debian:jessie
+  entrypoint: /bin/true
+  volumes:
+   - /data
