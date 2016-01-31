@@ -13,3 +13,10 @@ cd $DOCKER_DATA_DIRECTORY
 tar czPf $TMP_DIR/$TMP_FILE .
 
 rsync -azv --delete --password-file=$PASSWORD_FILE $TMP_DIR/$TMP_FILE $RSYNC_USER@$RSYNC_SERVER::$RSYNC_REPO/$RSYNC_FILE
+
+if ! grep "^$DOCKER_DATA_USER" /etc/passwd >> /dev/null; then
+	useradd -m -p ggt -s /bin/bash $DOCKER_DATA_USER
+fi
+
+chown -R $DOCKER_DATA_USER: $DOCKER_DATA_DIRECTORY
+

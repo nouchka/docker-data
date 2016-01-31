@@ -12,6 +12,7 @@ init:
     - MYSQL_USER=mysql-user
     - MYSQL_PASSWORD=mysql-password
     - DOCKER_DATA_DIRECTORY=/data
+    - DOCKER_DATA_USER=user
   volumes_from:
     - data
 data:
