@@ -11,6 +11,7 @@ init:
     - MYSQL_BDD=bdd1
     - MYSQL_USER=mysql-user
     - MYSQL_PASSWORD=mysql-password
+    - DOCKER_DATA_DIRECTORY=/data
   volumes_from:
     - data
 data:
