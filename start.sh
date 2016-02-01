@@ -8,6 +8,6 @@ if [ ! -z "$DOCKER_FILE_TEST_EXISTS" ]; then
 	else
 		echo "init"
 		sleep 5
-		/backup.sh
+		/init.sh
 	fi
 fi
