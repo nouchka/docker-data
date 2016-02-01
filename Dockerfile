@@ -11,6 +11,9 @@ RUN chmod +x /init.sh
 COPY backup.sh /backup.sh
 RUN chmod +x /backup.sh
 
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
 ENV DOCKER_DATA_DIRECTORY     /data
 ENV RSYNC_REPO     backup
 ENV RSYNC_FILE     file.tgz
@@ -18,4 +21,4 @@ ENV RSYNC_SERVER   server
 ENV RSYNC_USER     user
 ENV RSYNC_PASSWORD password
 
-CMD /init.sh
+CMD /start.sh
