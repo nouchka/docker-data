@@ -20,5 +20,6 @@ ENV RSYNC_FILE     file.tgz
 ENV RSYNC_SERVER   server
 ENV RSYNC_USER     user
 ENV RSYNC_PASSWORD password
+ENV RSYNC_FLAG     azv
 
 CMD /start.sh
