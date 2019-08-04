@@ -2,7 +2,7 @@ FROM debian:stable-slim
 MAINTAINER Jean-Avit Promis "docker@katagena.com"
 
 RUN apt-get update && \
-	DEBIAN_FRONTEND=noninteractive apt-get -yq install mysql-client rsync tar wget cron && \
+	DEBIAN_FRONTEND=noninteractive apt-get -yq install mysql-client rsync tar wget cron jq && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY init.sh /init.sh
