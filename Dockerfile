@@ -28,4 +28,7 @@ ENV RSYNC_PASSWORD password
 ENV RSYNC_FLAG     azv
 ENV CRON_BACKUP    * 6 * * *
 
+WORKDIR /data/
+VOLUME /data/
+
 CMD /start.sh
